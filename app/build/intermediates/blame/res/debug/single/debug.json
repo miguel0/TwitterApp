@@ -428,6 +428,10 @@
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_compose.png.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/src/main/res/drawable-mdpi/ic_compose.png"
+    },
+    {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/color_abc_tint_default.xml.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/color/abc_tint_default.xml"
     },
@@ -496,6 +500,10 @@
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_compose.xml.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_compose.xml"
+    },
+    {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable_abc_cab_background_internal_bg.xml.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable/abc_cab_background_internal_bg.xml"
     },
@@ -562,6 +570,10 @@
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_compose.png.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/src/main/res/drawable-xxhdpi/ic_compose.png"
     },
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -716,12 +728,12 @@
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/layout_abc_expanded_menu_layout.xml.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -738,6 +750,10 @@
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-v21_abc_edit_text_material.xml.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/menu_menu_timeline.xml.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/src/main/res/menu/menu_timeline.xml"
     },
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -904,6 +920,10 @@
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/color-v23/abc_tint_default.xml"
     },
     {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_compose.png.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/generated/res/pngs/debug/drawable-ldpi/ic_compose.png"
+    },
+    {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/397e344fdd9ef841992125ad3754c40b/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
@@ -1042,6 +1062,10 @@
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_light.xml.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_compose.png.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_compose.png"
     },
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -1236,6 +1260,10 @@
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/layout/abc_alert_dialog_material.xml"
     },
     {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_compose.png.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/src/main/res/drawable-hdpi/ic_compose.png"
+    },
+    {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/8120b2a9a836910825ecabcac776fee4/res/layout/notification_media_cancel_action.xml"
     },
@@ -1278,6 +1306,10 @@
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_compose.png.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/src/main/res/drawable-xhdpi/ic_compose.png"
     },
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/menu_login.xml.flat",
@@ -1382,6 +1414,10 @@
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/layout_select_dialog_item_material.xml.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/layout_activity_compose.xml.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/src/main/res/layout/activity_compose.xml"
     },
     {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_item_layout.xml.flat",
