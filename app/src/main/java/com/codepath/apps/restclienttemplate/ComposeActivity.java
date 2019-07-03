@@ -3,10 +3,13 @@ package com.codepath.apps.restclienttemplate;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.codepath.apps.restclienttemplate.models.Tweet;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -21,6 +24,7 @@ public class ComposeActivity extends AppCompatActivity {
     EditText etBody;
     Button btTweet;
     RestClient client;
+    TextView tvCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,7 @@ public class ComposeActivity extends AppCompatActivity {
 
         etBody = findViewById(R.id.etBody);
         btTweet = findViewById(R.id.btTweet);
+        tvCount = findViewById(R.id.tvCount);
 
         btTweet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +43,23 @@ public class ComposeActivity extends AppCompatActivity {
         });
 
         client = RestApplication.getRestClient(this);
+
+        etBody.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                tvCount.setText(etBody.getText().toString().length() + "");
+            }
+        });
     }
 
     private void sendTweet() {

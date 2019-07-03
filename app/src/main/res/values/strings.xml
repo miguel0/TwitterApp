@@ -7,5 +7,6 @@
     <string name="intent_host">cprest</string>
     <string name="tweet_btn">Tweet</string>
     <string name="tweet_hint">What\'s happening?</string>
+    <string name="counter">0</string>
 
 </resources>

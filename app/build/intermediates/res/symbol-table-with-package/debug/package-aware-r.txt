@@ -801,6 +801,7 @@ id start
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id swipeContainer
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -816,6 +817,7 @@ id title_template
 id top
 id topPanel
 id tvBody
+id tvCount
 id tvDate
 id tvUserName
 id uniform
@@ -922,6 +924,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string counter
 string intent_host
 string intent_scheme
 string login_label
