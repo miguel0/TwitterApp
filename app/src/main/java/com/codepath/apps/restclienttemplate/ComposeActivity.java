@@ -3,8 +3,6 @@ package com.codepath.apps.restclienttemplate;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,23 +16,29 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.parceler.Parcels;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnTextChanged;
 import cz.msebera.android.httpclient.Header;
 
 public class ComposeActivity extends AppCompatActivity {
-    EditText etBody;
-    Button btTweet;
+    @BindView(R.id.etBody) EditText etBody;
+    @BindView(R.id.btTweet) Button btTweet;
+    @BindView(R.id.tvCount) TextView tvCount;
+
+    @OnTextChanged(R.id.etBody)
+    public void changeCount() {
+        tvCount.setText(etBody.getText().toString().length() + "");
+    }
+
     RestClient client;
-    TextView tvCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compose);
 
-        etBody = findViewById(R.id.etBody);
-        btTweet = findViewById(R.id.btTweet);
-        tvCount = findViewById(R.id.tvCount);
-
+        ButterKnife.bind(this);
         btTweet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,23 +47,6 @@ public class ComposeActivity extends AppCompatActivity {
         });
 
         client = RestApplication.getRestClient(this);
-
-        etBody.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                tvCount.setText(etBody.getText().toString().length() + "");
-            }
-        });
     }
 
     private void sendTweet() {

@@ -18,6 +18,9 @@ public class Tweet {
     public String createdAt;
     public String date;
     public User user;
+    public String imageUrl;
+    public boolean liked;
+    public int favCount;
 
     public Tweet() {}
 
@@ -31,8 +34,21 @@ public class Tweet {
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.user = User.fromJSON(jsonObject.getJSONObject("user"));
         tweet.date = getRelativeTimeAgo(jsonObject.getString("created_at"));
+        tweet.imageUrl = getImageUrl(jsonObject);
+        tweet.liked = jsonObject.getBoolean("favorited");
+        tweet.favCount = jsonObject.getInt("favorite_count");
 
         return tweet;
+    }
+
+    private static String getImageUrl(JSONObject obj) {
+        String res;
+        try {
+            res = obj.getJSONObject("entities").getJSONArray("media").getJSONObject(0).getString("media_url_https");
+        } catch (JSONException e) {
+            res = "";
+        }
+        return res;
     }
 
     // getRelativeTimeAgo("Mon Apr 01 21:16:23 +0000 2014");
