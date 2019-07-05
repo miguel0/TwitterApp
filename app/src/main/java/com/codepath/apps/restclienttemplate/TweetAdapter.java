@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.codepath.apps.restclienttemplate.models.Tweet;
@@ -24,9 +25,10 @@ import cz.msebera.android.httpclient.Header;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> {
-    private List<Tweet> mTweets;
+    List<Tweet> mTweets;
     Context context;
     RestClient client;
+    TweetAdapter thisOb;
 
     public  TweetAdapter(List<Tweet> tweets) {
         mTweets = tweets;
@@ -39,7 +41,8 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
         LayoutInflater inflater = LayoutInflater.from(context);
         View tweetView = inflater.inflate(R.layout.item_tweet, viewGroup, false);
         ViewHolder viewHolder = new ViewHolder(tweetView);
-        return  viewHolder;
+        thisOb = this;
+        return viewHolder;
     }
 
     @Override
@@ -56,6 +59,8 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
         Glide.with(context)
                 .load(tweet.user.profileImageUrl)
                 .into(viewHolder.ivProfileImage);
+
+
 
         viewHolder.btLike.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -175,7 +180,7 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
         return  mTweets.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener {
         @BindView(R.id.ivProfileImage) public ImageView ivProfileImage;
         @BindView(R.id.tvUserName) public TextView tvUsername;
         @BindView(R.id.tvBody) public  TextView tvBody;
@@ -188,9 +193,32 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
         @BindView(R.id.tvHandle) public TextView tvHandle;
 
         public ViewHolder(View itemView) {
-            super((itemView));
+            super(itemView);
 
             ButterKnife.bind(this, itemView);
+            itemView.setOnLongClickListener(this);
+        }
+
+        @Override
+        public boolean onLongClick(View v) {
+            final int position = getAdapterPosition();
+            if (position != RecyclerView.NO_POSITION) {
+                Tweet tempTweet = mTweets.get(position);
+                client = RestApplication.getRestClient(context);
+                client.deleteTweet(tempTweet.uid, new AsyncHttpResponseHandler() {
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                        thisOb.notifyItemRemoved(position);
+                        Toast.makeText(context, "Tweet deleted.", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                        Toast.makeText(context, "You must be the author of this tweet to delete it.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+            return true;
         }
     }
 

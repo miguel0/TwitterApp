@@ -90,4 +90,9 @@ public class RestClient extends OAuthBaseClient {
 		String apiUrl = getApiUrl(String.format("statuses/unretweet/%s.json", id));
 		client.post(apiUrl, null, handler);
 	}
+
+	public void deleteTweet(String id, AsyncHttpResponseHandler handler) {
+        String apiUrl = getApiUrl(String.format("statuses/destroy/%s.json", id));
+        client.post(apiUrl, null, handler);
+    }
 }
