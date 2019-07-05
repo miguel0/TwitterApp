@@ -21,6 +21,8 @@ public class Tweet {
     public String imageUrl;
     public boolean liked;
     public int favCount;
+    public  boolean retweeted;
+    public  int retweetCount;
 
     public Tweet() {}
 
@@ -30,13 +32,15 @@ public class Tweet {
 
         // extraxt values from json
         tweet.body = jsonObject.getString("text");
-        tweet.uid = jsonObject.getString("id");
+        tweet.uid = jsonObject.getString("id_str");
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.user = User.fromJSON(jsonObject.getJSONObject("user"));
         tweet.date = getRelativeTimeAgo(jsonObject.getString("created_at"));
         tweet.imageUrl = getImageUrl(jsonObject);
         tweet.liked = jsonObject.getBoolean("favorited");
         tweet.favCount = jsonObject.getInt("favorite_count");
+        tweet.retweeted = jsonObject.getBoolean("retweeted");
+        tweet.retweetCount = jsonObject.getInt("retweet_count");
 
         return tweet;
     }

@@ -670,6 +670,7 @@ drawable ic_compose
 drawable ic_launcher
 drawable ic_vector_compose
 drawable ic_vector_heart
+drawable ic_vector_retweet_stroke
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -721,6 +722,7 @@ id beginning
 id blocking
 id bottom
 id btLike
+id btRetweet
 id btTweet
 id buttonPanel
 id cancel_action
@@ -791,6 +793,7 @@ id percent
 id progress_circular
 id progress_horizontal
 id radio
+id retweetCount
 id right
 id right_icon
 id right_side
@@ -844,6 +847,7 @@ id topPanel
 id tvBody
 id tvCount
 id tvDate
+id tvHandle
 id tvUserName
 id uniform
 id up

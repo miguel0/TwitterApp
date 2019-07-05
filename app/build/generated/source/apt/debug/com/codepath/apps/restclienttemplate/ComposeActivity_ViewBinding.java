@@ -18,9 +18,9 @@ import java.lang.Override;
 public class ComposeActivity_ViewBinding<T extends ComposeActivity> implements Unbinder {
   protected T target;
 
-  private View view2131165244;
+  private View view2131165245;
 
-  private TextWatcher view2131165244TextWatcher;
+  private TextWatcher view2131165245TextWatcher;
 
   @UiThread
   public ComposeActivity_ViewBinding(final T target, View source) {
@@ -29,8 +29,8 @@ public class ComposeActivity_ViewBinding<T extends ComposeActivity> implements U
     View view;
     view = Utils.findRequiredView(source, R.id.etBody, "field 'etBody' and method 'changeCount'");
     target.etBody = Utils.castView(view, R.id.etBody, "field 'etBody'", EditText.class);
-    view2131165244 = view;
-    view2131165244TextWatcher = new TextWatcher() {
+    view2131165245 = view;
+    view2131165245TextWatcher = new TextWatcher() {
       @Override
       public void onTextChanged(CharSequence p0, int p1, int p2, int p3) {
         target.changeCount();
@@ -44,7 +44,7 @@ public class ComposeActivity_ViewBinding<T extends ComposeActivity> implements U
       public void afterTextChanged(Editable p0) {
       }
     };
-    ((TextView) view).addTextChangedListener(view2131165244TextWatcher);
+    ((TextView) view).addTextChangedListener(view2131165245TextWatcher);
     target.btTweet = Utils.findRequiredViewAsType(source, R.id.btTweet, "field 'btTweet'", Button.class);
     target.tvCount = Utils.findRequiredViewAsType(source, R.id.tvCount, "field 'tvCount'", TextView.class);
   }
@@ -59,9 +59,9 @@ public class ComposeActivity_ViewBinding<T extends ComposeActivity> implements U
     target.btTweet = null;
     target.tvCount = null;
 
-    ((TextView) view2131165244).removeTextChangedListener(view2131165244TextWatcher);
-    view2131165244TextWatcher = null;
-    view2131165244 = null;
+    ((TextView) view2131165245).removeTextChangedListener(view2131165245TextWatcher);
+    view2131165245TextWatcher = null;
+    view2131165245 = null;
 
     this.target = null;
   }

@@ -464,6 +464,10 @@
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable_ic_vector_retweet_stroke.xml.flat",
+        "source": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/src/main/res/drawable/ic_vector_retweet_stroke.xml"
+    },
+    {
         "merged": "/Users/miguelbarro/Downloads/Android/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "/Users/miguelbarro/.gradle/caches/transforms-2/files-2.1/2f6eacc2536318a5626abc6e164ad07b/res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },

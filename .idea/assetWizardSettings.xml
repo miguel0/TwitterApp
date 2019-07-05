@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_vector_heart" />
-                            <entry key="sourceFile" value="$PROJECT_DIR$/../../twitter-redesign-icons/vectors/ic_vector_heart.xml" />
+                            <entry key="outputName" value="ic_vector_retweet_stroke" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/../../twitter-redesign-icons/vectors/ic_vector_retweet_stroke.xml" />
                           </map>
                         </option>
                       </PersistentState>
