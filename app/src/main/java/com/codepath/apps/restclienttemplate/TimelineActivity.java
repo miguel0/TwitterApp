@@ -29,12 +29,14 @@ import cz.msebera.android.httpclient.Header;
 public class TimelineActivity extends AppCompatActivity {
     public final static int COMPOSE_CODE = 100;
 
-    @BindView(R.id.rvTweet) RecyclerView rvTweets;
-    @BindView(R.id.swipeContainer) SwipeRefreshLayout swipeContainer;
-
+    private EndlessRecyclerViewScrollListener scrollListener;
+    long maxId = 0;
     RestClient client;
     TweetAdapter tweetAdapter;
     ArrayList<Tweet> tweets;
+
+    @BindView(R.id.rvTweet) RecyclerView rvTweets;
+    @BindView(R.id.swipeContainer) SwipeRefreshLayout swipeContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +49,19 @@ public class TimelineActivity extends AppCompatActivity {
         tweets = new ArrayList<>();
         tweetAdapter = new TweetAdapter(tweets);
 
-        rvTweets.setLayoutManager(new LinearLayoutManager(this));
-        rvTweets.setAdapter(tweetAdapter);
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
+        rvTweets.setLayoutManager(llm);
+        rvTweets.setAdapter(tweetAdapter);
+
+        scrollListener = new EndlessRecyclerViewScrollListener(llm) {
+            @Override
+            public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+                loadNextDataFromApi(page);
+            }
+        };
+        rvTweets.addOnScrollListener(scrollListener);
+
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(rvTweets.getContext(), llm.getOrientation());
         rvTweets.addItemDecoration(dividerItemDecoration);
 
@@ -70,18 +81,18 @@ public class TimelineActivity extends AppCompatActivity {
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
 
-        populateTimeline();
+        populateTimeline(maxId);
     }
 
     public void fetchTimelineAsync(int page) {
         tweetAdapter.clear();
-        populateTimeline();
+        populateTimeline(0);
         swipeContainer.setRefreshing(false);
     }
 
 
-    private void populateTimeline() {
-        client.getHomeTimeline(new JsonHttpResponseHandler() {
+    private void populateTimeline(long maxIdP) {
+        client.getHomeTimeline(maxIdP, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 Log.d("TwitterClient", response.toString());
@@ -157,5 +168,10 @@ public class TimelineActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void loadNextDataFromApi(int offset) {
+        maxId = Long.parseLong(tweets.get(tweets.size() - 1).uid);
+        populateTimeline(maxId);
     }
 }

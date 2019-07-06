@@ -78,7 +78,6 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
                                 viewHolder.likeCount.setText(((Integer.parseInt(viewHolder.likeCount.getText().toString())-1)+""));
                             }
                             tweet.liked = false;
-                            // client.unLikeTweet(tweet.uid, this);
                         }
 
                         @Override
@@ -94,7 +93,6 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
                             viewHolder.btLike.setColorFilter(Color.argb(255, 255, 0, 0));
                             viewHolder.likeCount.setText(((Integer.parseInt(viewHolder.likeCount.getText().toString())+1)+""));
                             tweet.liked = true;
-                            // client.likeTweet(tweet.uid, this);
                         }
 
                         @Override

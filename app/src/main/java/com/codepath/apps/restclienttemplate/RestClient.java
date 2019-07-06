@@ -42,12 +42,15 @@ public class RestClient extends OAuthBaseClient {
 	}
 	// CHANGE THIS
 	// DEFINE METHODS for different API endpoints here
-	public void getHomeTimeline(AsyncHttpResponseHandler handler) {
+	public void getHomeTimeline(long maxId, AsyncHttpResponseHandler handler) {
 		String apiUrl = getApiUrl("statuses/home_timeline.json");
 		// Can specify query string params directly or through RequestParams.
 		RequestParams params = new RequestParams();
 		params.put("count", 25);
 		params.put("since_id", 1);
+		if (maxId!=0) {
+			params.put("max_id", maxId);
+		}
 		client.get(apiUrl, params, handler);
 	}
 
@@ -63,7 +66,7 @@ public class RestClient extends OAuthBaseClient {
 	public void sendTweet(String message, AsyncHttpResponseHandler handler) {
 		String apiUrl = getApiUrl("statuses/update.json");
 		RequestParams params = new RequestParams();
-		params.put("status", message);
+		params.put("id", message);
 		client.post(apiUrl, params, handler);
 	}
 
