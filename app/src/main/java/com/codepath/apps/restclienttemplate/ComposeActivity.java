@@ -72,6 +72,7 @@ public class ComposeActivity extends AppCompatActivity {
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 error.printStackTrace();
+                Log.e("Compose", "Tweeting not working");
             }
         });
     }
